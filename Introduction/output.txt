@@ -1,1 +1,15 @@
 Name: Rahul
+Current Balance: 50000.0
+Credit account by sum of: 1000.0
+Current Balance: 51000.0
+Name: anonymous
+Current Balance: 0.0
+Credit account by sum of: 1000.0
+Current Balance: 1000.0
+Your account balance is insufficient.
+Debit account by sum of: 1500.0
+Current Balance: 1000.0
+Name: Anand
+Current 60000.0
+Credit account by sum of: 5000.0
+Current Balance: 65000.0
