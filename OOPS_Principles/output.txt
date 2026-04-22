@@ -1,1 +1,4 @@
-Default access in the same package.
+Salary : 10000.00
+Name : Alice
+Employee Id : 9656
+Salary : 15840.00
