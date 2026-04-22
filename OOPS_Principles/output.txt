@@ -1,4 +1,18 @@
-Salary : 10000.00
-Name : Alice
-Employee Id : 9656
-Salary : 15840.00
+--------------------- 
+Student name: Alice
+School name: DPS
+One
+N
+--------------------- 
+Teacher name: John
+Subject name: Maths
+School name: DPS
+One
+M
+--------------------- 
+Parent name: Dad
+Student name: Ali
+School name: DPS
+One
+N
+2N
