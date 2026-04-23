@@ -1,18 +1,11 @@
+Name: Laptop
+Category: Electronics
+Price: 60000.0
+Warranty Period In Years: 2
+Brand: HP
 --------------------- 
-Student name: Alice
-School name: DPS
-One
-N
---------------------- 
-Teacher name: John
-Subject name: Maths
-School name: DPS
-One
-M
---------------------- 
-Parent name: Dad
-Student name: Ali
-School name: DPS
-One
-N
-2N
+Name: Polo
+Category: Tshirts
+Price: 1000.0
+Color: blue
+Size: M
