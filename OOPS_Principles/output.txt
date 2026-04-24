@@ -1,11 +1,9 @@
-Name: Laptop
-Category: Electronics
-Price: 60000.0
-Warranty Period In Years: 2
-Brand: HP
---------------------- 
-Name: Polo
-Category: Tshirts
-Price: 1000.0
-Color: blue
-Size: M
+Manager Details
+Name : Jax
+Id : 101
+Team Size : 8
+
+Engineer Details
+Name : William
+Id : 202
+Specialization : Backend Developer
