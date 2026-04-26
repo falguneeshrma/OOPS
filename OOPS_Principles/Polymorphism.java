@@ -48,6 +48,32 @@ class Child extends Parent{
 //memory management     
 
 
+class ShapeCalculator{
+    private int radius;
+    private int length;
+    private int width;
+    private int base1;
+    private int base2;
+    private int height;
+    private double area;
+
+    public void area(int radius){
+        area =  3.14 * radius * radius;
+        System.out.println("Area of Circle : " + (int) area);
+    }
+
+    public void area(int length, int width){
+        area = length * width;
+        System.out.println("Area of Rectangle : " + (int) area);
+    }
+
+    public void area(int base1, int base2, int height){
+        area = ( (base1 + base2) * height) / 2;
+        System.out.println("Area of Trapezoid : " + (int) area);
+    }
+}
+
+
 class Polymorphism{
     public static void main(String[] args){
         //method overloading
@@ -57,5 +83,21 @@ class Polymorphism{
         //method overriding
         Child child = new Child(); //runtime polymorphism
         child.display();
+
+
+        System.out.println("------------------------");
+
+
+        int radius = 2;
+        int length = 2;
+        int width = 3;
+        int base1 = 2;
+        int base2 = 3;
+        int height = 2;
+
+        ShapeCalculator shape = new ShapeCalculator();
+        shape.area(radius);
+        shape.area(length, width);
+        shape.area(base1, base2, height);
     }
 }

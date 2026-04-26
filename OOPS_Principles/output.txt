@@ -1,2 +1,6 @@
 Result: 5
 This is Child class
+------------------------
+Area of Circle : 12
+Area of Rectangle : 6
+Area of Trapezoid : 5
