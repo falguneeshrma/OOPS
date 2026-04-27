@@ -1,0 +1,9 @@
+Manual car is starting!
+Peeep...Peeep!
+---------------
+Manual car is starting!
+Peeep...Peeep!
+Manual car is now playing music!
+---------------
+Automatic car is starting!
+Peeep...Peeep!
