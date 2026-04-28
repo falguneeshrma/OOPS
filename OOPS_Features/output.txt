@@ -1,9 +1,26 @@
+This is a car constructor.
+This is a parameterised constructor.
+This is a manual car constructor.
 Manual car is starting!
 Peeep...Peeep!
+Car has a sunroof!
 ---------------
+This is a car constructor.
+This is a parameterised constructor.
+This is a manual car constructor.
 Manual car is starting!
 Peeep...Peeep!
 Manual car is now playing music!
+Car has a sunroof!
 ---------------
+This is a car constructor.
+This is a dealer constructor.
+This is a automatic car constructor.
 Automatic car is starting!
 Peeep...Peeep!
+Car has a sunroof!
+---------------
+This is a electric car constructor.
+Electric car is starting!
+---------------
+Wheels: 4
