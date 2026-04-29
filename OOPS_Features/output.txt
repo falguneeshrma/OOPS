@@ -1,2 +1,12 @@
-The dog Rocky says : Woof!
-The cat Sweetie says : Meow!
+Animals can hear.
+0
+
+Cat eats fishes.
+Cat sleeps in a cattery.
+Cat meows.
+Cats can breathe.
+
+Rabbit eats carrots.
+Rabbit sleeps in a burrow.
+Rabbit oinks.
+Rabbits can breathe.
