@@ -1,3 +1,8 @@
+Processing credit card payment of 284.50
+Processing UPI payment of 27476.20
+
+------------------------------------
+
 Animals can hear.
 0
 

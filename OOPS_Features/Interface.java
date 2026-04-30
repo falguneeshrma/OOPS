@@ -72,13 +72,60 @@ class Rabbit implements Animal{
     }
 }
 
+
+//Real world Example
+
+interface PaymentGateway{
+    void processPayment( double amount );
+}
+
+class CreditCardPayment implements PaymentGateway{
+    @Override
+    public void processPayment( double amount ){
+        System.out.printf("Processing credit card payment of %.2f%n", amount);
+    }
+}
+
+class UPIPayment implements PaymentGateway{
+    @Override
+    public void processPayment( double amount ){
+        System.out.printf("Processing UPI payment of %.2f%n", amount);
+    }
+}
+
+
 class Interface{
     public static void main(String[] args){
+
+        String[] paymentMethod = { "credit", "upi" };
+        double[] paymentValue = { 284.5, 27476.2 };
+
+        // Process payments based on method
+        for (int i = 0; i < paymentMethod.length; i++) {
+            PaymentGateway paymentGateway;
+            if (paymentMethod[i].equals("credit")) {
+                paymentGateway = new CreditCardPayment();
+            } else if (paymentMethod[i].equals("upi")) {
+                paymentGateway = new UPIPayment();
+            } else {
+                continue; // If payment method is unknown
+            }
+            paymentGateway.processPayment(paymentValue[i]);
+        }
+
+        System.out.println();
+
+        System.out.println("------------------------------------");
+
+        System.out.println();
+
+        
         // Animal cat = new Cat();
         // Animal rabbit = new Rabbit();           // cannot implement two interfaces
 
         Cat cat = new Cat();
-        Rabbit rabbit = new Rabbit();  
+        Rabbit rabbit = new Rabbit();              // can implement two interfaces
+
 
         Animal.hear();
         System.out.println(Animal.kittens);
@@ -98,5 +145,6 @@ class Interface{
         // rabbit.reproduce();                      //throws error
         rabbit.sound();
         rabbit.breathe();
+
     }
 }
