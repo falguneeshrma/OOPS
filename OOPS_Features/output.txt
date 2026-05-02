@@ -1,17 +1,4 @@
-Processing credit card payment of 284.50
-Processing UPI payment of 27476.20
-
-------------------------------------
-
-Animals can hear.
-0
-
-Cat eats fishes.
-Cat sleeps in a cattery.
-Cat meows.
-Cats can breathe.
-
-Rabbit eats carrots.
-Rabbit sleeps in a burrow.
-Rabbit oinks.
-Rabbits can breathe.
+Count: 1
+Count: 2
+Count: 2
+Addition: 5
