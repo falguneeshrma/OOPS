@@ -27,6 +27,26 @@ class Maths{
     }
 }
 
+// Example 
+
+class Counter {
+
+    private static int count = 0;
+
+    public Counter() {
+        count++;
+    }
+
+    public static int getCount() {
+        return count;
+    }
+
+    public static void resetCount() {
+        count = 0;
+    }
+}
+
+
 
 class StaticKeyword{
     public static void main(String[] args){
@@ -39,5 +59,13 @@ class StaticKeyword{
         c1.displaySum();
 
         Maths.sum(2,3); // Calling static method without object creation
+
+        System.out.println();
+
+        int count = 10;
+        for (int i = 0; i < count; i++) {
+            new Counter(); // Creating 10 Counter objects
+        }
+        System.out.println("Number of objects created : " + Counter.getCount());
     }
 }

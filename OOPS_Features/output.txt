@@ -2,3 +2,5 @@ Count: 1
 Count: 2
 Count: 2
 Addition: 5
+
+Number of objects created : 10
