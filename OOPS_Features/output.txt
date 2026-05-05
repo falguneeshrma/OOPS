@@ -1,1 +1,9 @@
-Inner class executed! 10
+
+------------Static Inner Class------------
+
+------------Non-Static Inner Class------------
+
+------------Local Inner Class------------
+
+------------Anonymous Inner Class------------
+Anonymous
