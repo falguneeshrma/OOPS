@@ -6,4 +6,8 @@
 ------------Local Inner Class------------
 
 ------------Anonymous Inner Class------------
-Anonymous
+
+------------Real World Example------------
+Val is not added: 18
+Val is not added: 7
+[18]

@@ -69,9 +69,15 @@ import java.util.*;
 //     public void execute();
 // }
 
-abstract Sample{
-    public void execute();
-}
+// abstract Sample{
+//     public void execute();
+// }
+
+
+// Real World Example
+
+
+
 
 class InnerClasses{
     public static void main(String[] args){
@@ -104,14 +110,30 @@ class InnerClasses{
         System.out.println();
         System.out.println("------------Anonymous Inner Class------------");
 
-        Sample sample = new Sample(){
-            public void execute(){
-                @Override
-                System.out.println("Anonymous Inner Class");
+        // Sample sample = new Sample(){
+        //     public void execute(){
+        //         @Override
+        //         System.out.println("Anonymous Inner Class");
+        //     }
+        // };
+        // sample.execute();
+
+        System.out.println();
+        System.out.println("------------Real World Example------------");
+
+        ArrayList<Integer> list = new ArrayList<>(){
+            @Override
+            public boolean add(Integer val){
+                System.out.println("Val is not added: " + val);
+                if(val % 2 == 0) return super.add(val);
+                return false;
+                
             }
         };
-        sample.execute();
 
+        list.add(18);
+        list.add(7);
+        System.out.println(list);
 
     }
 }
