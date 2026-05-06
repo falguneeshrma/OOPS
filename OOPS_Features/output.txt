@@ -11,3 +11,10 @@
 Val is not added: 18
 Val is not added: 7
 [18]
+
+------------Real World Example------------
+Robot-1 is performing an action.
+Robot-1 arm picking an item.
+Processor analyzing the data.
+Robot-1 sensor detecting obstacles.
+Robot-1 executing a custom task.
