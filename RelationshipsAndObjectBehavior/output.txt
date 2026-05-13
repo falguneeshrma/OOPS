@@ -1,12 +1,9 @@
+Alice
+12345678
+Alice
+12345678
 
-University Name : Global_University
-College Name : COEP
-College ID : CO8543
-College Name : PICT
-College ID : PI9514
-College Name : VJTI
-College ID : VJ8643
-College Name : WCE
-College ID : VF569
-College Name : PCCOE
-College ID : PC9246
+Alice
+12345678
+Bob
+987654321
