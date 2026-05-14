@@ -1,9 +1,20 @@
-Alice
-12345678
-Alice
-12345678
 
-Alice
-12345678
-Bob
-987654321
+Original Library :
+Library : Central_Library
+Book : Frankestein, Author : Mary_Shelley
+Book : King_Arthur_and_the_Round_Table, Author : Rosemary_Sutcliff
+
+After Modifications :
+Library : Central_Library
+Book : Frankestein, Author : Mary_Shelley
+Book : Treasure_Island, Author : Robert_Louis_Stevenson
+
+Shallow Clone :
+Library : Central_Library
+Book : Frankestein, Author : Mary_Shelley
+Book : Treasure_Island, Author : Robert_Louis_Stevenson
+
+Deep Clone :
+Library : Central_Library
+Book : Frankestein, Author : Mary_Shelley
+Book : Treasure_Island, Author : Robert_Louis_Stevenson
