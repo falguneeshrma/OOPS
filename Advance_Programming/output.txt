@@ -1,2 +1,4 @@
-Catch statementIndex 5 out of bounds for length 2
-Statement2: after catch statement
+Amount is credited.
+Amount is debited.
+You do not have enough balance.
+Your current available balance is: 100.0
