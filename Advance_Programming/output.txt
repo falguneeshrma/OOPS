@@ -1,4 +1,0 @@
-Amount is credited.
-Amount is debited.
-You do not have enough balance.
-Your current available balance is: 100.0
