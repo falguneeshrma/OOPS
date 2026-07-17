@@ -38,20 +38,26 @@ class GenericMethods {
     }
 }
 
+//Bounded Type Parameters
+
+class Calculator <T extends Number>{
+    public double add(T a, T b){
+        return a.doubleValue() + b.doubleValue();
+    }
+} 
+
 class Generics{
 
-    public static void main(String[] args){
-        ExampleGenerics<Integer> obj = new ExampleGenerics<Integer>();
-        obj.add(10);
-        obj.add(20);
-        System.out.println(obj.getElement(1));
-        obj.removeLast();
-        obj.print();
-        
-        System.out.println();
+    public static void printArray(List<? extends Number> list){  //only read access
+        for( Number val : list){
+            System.out.print(val + " ");
+        }
+    }
 
-        Integer[] arr = {1, 2, 3};
-        GenericMethods obj1 = new GenericMethods();
-        obj1.printArray(arr);
+    public static void main(String[] args){
+        List<Number> list = new ArrayList<>();
+        list.add(10);
+        list.add(100);
+        printArray(list);
     }   
 }
