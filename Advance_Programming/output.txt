@@ -1,3 +1,8 @@
-10
-10.9
-hello
+true
+true
+File Name: file_handling.txt
+Writable: true
+Readable: true
+File Size in bytes: 0
+Absolute Path: C:\Users\falgu\Documents\OOPS\Advance_Programming\file_handling.txt
+File already exists.
