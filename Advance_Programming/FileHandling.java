@@ -49,7 +49,7 @@ class FileHandling{
     // }
 
 // File Reader and Buffered Reader
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException{
         try{
             BufferedReader br = new BufferedReader( new FileReader("C:/Users/falgu/Documents/OOPS/Advance_Programming/file_handling.txt"));  
             while(br.readLine() != null){
@@ -62,5 +62,6 @@ class FileHandling{
         finally{
             br.close();
         }
+    }
 
 }
