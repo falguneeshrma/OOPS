@@ -50,17 +50,21 @@ class FileHandling{
 
 // File Reader and Buffered Reader
     public static void main(String[] args) throws IOException{
+        BufferedReader br = null;
         try{
-            BufferedReader br = new BufferedReader( new FileReader("C:/Users/falgu/Documents/OOPS/Advance_Programming/file_handling.txt"));  
-            while(br.readLine() != null){
-                System.out.println("Line");
+            br = new BufferedReader( new FileReader("C:/Users/falgu/Documents/OOPS/Advance_Programming/file_handling.txt"));  
+            String line;
+            while ((line = br.readLine()) != null){
+                System.out.println("Line " + line);
             }  
         }
         catch(Exception e){
             System.out.println(e.getMessage());
         }
         finally{
-            br.close();
+            if (br != null) {
+                br.close(); 
+            }
         }
     }
 
