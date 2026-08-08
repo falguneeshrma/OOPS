@@ -3,6 +3,22 @@ import java.io.*;
 import java.io.File;
 import java.io.IOException;
 
+// Logging Application Data
+class Logger{
+    private String path;
+    Logger (String path) throws IOException{
+        File file = new File(path);
+        if(!file.exists){
+            file.createNewFile();
+        }
+        this.path = path;
+    }
+
+    public void log(String message){
+        
+    }
+}
+
 class FileHandling{
 
 //File class
@@ -49,23 +65,44 @@ class FileHandling{
     // }
 
 // File Reader and Buffered Reader
+
+    // public static void main(String[] args) throws IOException{
+    //     BufferedReader br = null;
+    //     try{
+    //         br = new BufferedReader( new FileReader("C:/Users/falgu/Documents/OOPS/Advance_Programming/file_handling.txt"));  
+    //         String line;
+    //         while ((line = br.readLine()) != null){
+    //             System.out.println("Line " + line);
+    //         }  
+    //     }
+    //     catch(Exception e){
+    //         System.out.println(e.getMessage());
+    //     }
+    //     finally{
+    //         if (br != null) {
+    //             br.close(); 
+    //         }
+    //     }
+    // }
+
+// Try-with-resources
+
+    // public static void main(String[] args) throws IOException{
+    //     try(BufferedReader br = new BufferedReader( new FileReader("C:/Users/falgu/Documents/OOPS/Advance_Programming/file_handling.txt"))){
+    //         int ch;
+    //         while ((ch = br.read()) != -1){
+    //             System.out.println("char " + ch);
+    //         }  
+    //     }
+    //     catch(Exception e){
+    //         System.out.println(e.getMessage());
+    //     }
+    // }
+
+// Logging Application Data
+
     public static void main(String[] args) throws IOException{
-        BufferedReader br = null;
-        try{
-            br = new BufferedReader( new FileReader("C:/Users/falgu/Documents/OOPS/Advance_Programming/file_handling.txt"));  
-            String line;
-            while ((line = br.readLine()) != null){
-                System.out.println("Line " + line);
-            }  
-        }
-        catch(Exception e){
-            System.out.println(e.getMessage());
-        }
-        finally{
-            if (br != null) {
-                br.close(); 
-            }
-        }
+
     }
 
 }
