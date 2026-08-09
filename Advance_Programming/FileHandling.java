@@ -8,14 +8,20 @@ class Logger{
     private String path;
     Logger (String path) throws IOException{
         File file = new File(path);
-        if(!file.exists){
+        if(!file.exists()){
             file.createNewFile();
         }
         this.path = path;
     }
 
     public void log(String message){
-        
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))){
+            bw.write(message);
+            bw.newLine();
+        }
+        catch(Exception e){
+            System.out.println("Failed to log this message." + message);
+        }
     }
 }
 
@@ -102,7 +108,10 @@ class FileHandling{
 // Logging Application Data
 
     public static void main(String[] args) throws IOException{
-
+        Logger logger = new Logger("C:/Users/falgu/Documents/OOPS/Advance_Programming/logfile.txt");
+        logger.log("Please log 1");
+        logger.log("Please log 2");
+        logger.log("Please log 3");
     }
 
 }
