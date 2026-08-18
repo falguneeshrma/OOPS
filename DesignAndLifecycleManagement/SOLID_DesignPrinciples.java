@@ -36,33 +36,79 @@ import java.io.*;
 
 
 //LSP
-class FlyingBird {
-    public void fly(){
-        System.out.println("I can flyyyyyyyyyyyy....!");
+
+//incorrect version - the sparrow can substitute flying bird class but a penguin cannot
+
+// class FlyingBird {
+//     public void fly(){
+//         System.out.println("I can flyyyyyyyyyyyy....!");
+//     }
+// }
+
+// class Sparrow extends FlyingBird {
+//     @Override
+//     public void fly() { 
+//         System.out.println("Flying high!"); 
+//     }
+// }
+// class Penguin { 
+//     // Penguins do not implement FlyingBird
+//     @Override
+//     public void fly() { 
+//         Throw new UnsupportedOperationException("Penguins can't fly!"); 
+//     }
+// }
+
+//correct version 
+class Bird{
+    public void eat(){
+        System.out.pritln("Nummm, nummm, nummmm!");
     }
 }
 
-class Sparrow extends FlyingBird {
+Interface Flyable{
+    void fly();
+}
+
+class Sparrow extends Bird implements Flyable{
     @Override
     public void fly() { 
         System.out.println("Flying high!"); 
     }
 }
 
-class Penguin { 
-    // Penguins do not implement FlyingBird
+class Penguin extends Bird{
+    // does not implement fly method
 }
+
+
 
 // ISP
 
-interface Worker {
-    void work();
-    void eat();
+interface Printer {
+    void print();
 }
 
-class Robot implements Worker {
-    public void work() { System.out.println("Robot working"); }
-    public void eat() { throw new UnsupportedOperationException("Robots don't eat!"); }
+interface Scanner {
+    void scan();
+}
+
+class BasicPrinter implements Printer {
+    @Override
+    public void print(){ 
+        System.out.println("Printing..."); 
+    }
+}
+
+class AdvancedPrinter implements Printer, Scanner {
+    @Override
+    public void print(){ 
+        System.out.println("Printing..."); 
+    }
+    @Override
+    public void scan(){ 
+        System.out.println("Scnning..."); 
+    }
 }
 
 
@@ -81,7 +127,22 @@ class SOLID_DesignPrinciples{
         // rectangle.calculateArea();
 
     //LSP
-        FlyingBird sparrow = new Sparrow();
-        sparrow.fly();
+        // FlyingBird sparrow1 = new Sparrow();
+        // sparrow1.fly();
+        // FlyingBird penguin1 = new Penguin();
+        // penguin1.fly(); // throws UnsupportedOperationException
+
+        Bird sparrow2 = new Sparrow();
+        ((Flyable) sparrow2).fly();
+        Bird penguin2 = new Penguin();
+        penguin.eat();
+
+
+    //ISP
+        BasicPrinter printer1 = new BasicPrinter();
+        printer1.print();
+        AdvancedPrinter printer2 = new AdvancedPrinter();
+        printer2.print();
+        printer2.scan();
     }
 }
