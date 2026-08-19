@@ -60,62 +60,97 @@ import java.io.*;
 // }
 
 //correct version 
-class Bird{
-    public void eat(){
-        System.out.pritln("Nummm, nummm, nummmm!");
-    }
-}
+// class Bird{
+//     public void eat(){
+//         System.out.println("Nummm, nummm, nummmm!");
+//     }
+// }
 
-Interface Flyable{
-    void fly();
-}
+// interface Flyable{
+//     void fly();
+// }
 
-class Sparrow extends Bird implements Flyable{
-    @Override
-    public void fly() { 
-        System.out.println("Flying high!"); 
-    }
-}
+// class Sparrow extends Bird implements Flyable{
+//     @Override
+//     public void fly() { 
+//         System.out.println("Flying high!"); 
+//     }
+// }
 
-class Penguin extends Bird{
-    // does not implement fly method
-}
+// class Penguin extends Bird{
+//     // does not implement fly method
+// }
 
 
 
 // ISP
 
-interface Printer {
-    void print();
+// interface Printer {
+//     void print();
+// }
+
+// interface Scanner {
+//     void scan();
+// }
+
+// class BasicPrinter implements Printer {
+//     @Override
+//     public void print(){ 
+//         System.out.println("Printing..."); 
+//     }
+// }
+
+// class AdvancedPrinter implements Printer, Scanner {
+//     @Override
+//     public void print(){ 
+//         System.out.println("Printing..."); 
+//     }
+//     @Override
+//     public void scan(){ 
+//         System.out.println("Scnning..."); 
+//     }
+// }
+
+
+
+// DIP
+
+interface PaymentProcessor{
+    void processPayment();
 }
 
-interface Scanner {
-    void scan();
-}
-
-class BasicPrinter implements Printer {
+class UPIPaymentProcessor implements PaymentProcessor{
     @Override
-    public void print(){ 
-        System.out.println("Printing..."); 
+    public void processPayment(){
+        System.out.println("Processing payment through UPI");
     }
 }
 
-class AdvancedPrinter implements Printer, Scanner {
+class CreditCardProcessor implements PaymentProcessor{
     @Override
-    public void print(){ 
-        System.out.println("Printing..."); 
-    }
-    @Override
-    public void scan(){ 
-        System.out.println("Scnning..."); 
+    public void processPayment(){
+        System.out.println("Processing payment through Credit Card");
     }
 }
 
+class PaymentService{
+    private PaymentProcessor processor;
 
+    public PaymentService(PaymentProcessor processor){
+        this.processor = processor;
+    }
 
+    public void makePayment(){
+        processor.processPayment();
+    }
+}
 
-
-
+class CashOnDeliveryProcessor implements PaymentProcessor{
+    @Override
+    public void processPayment(){
+        System.out.println("Processing payment through Cash On Delivery");
+    }
+}
 
 class SOLID_DesignPrinciples{
     public static void main(String[] args){
@@ -132,17 +167,26 @@ class SOLID_DesignPrinciples{
         // FlyingBird penguin1 = new Penguin();
         // penguin1.fly(); // throws UnsupportedOperationException
 
-        Bird sparrow2 = new Sparrow();
-        ((Flyable) sparrow2).fly();
-        Bird penguin2 = new Penguin();
-        penguin.eat();
+        // Bird sparrow2 = new Sparrow();
+        // ((Flyable) sparrow2).fly();
+        // Bird penguin2 = new Penguin();
+        // penguin2.eat();
 
 
     //ISP
-        BasicPrinter printer1 = new BasicPrinter();
-        printer1.print();
-        AdvancedPrinter printer2 = new AdvancedPrinter();
-        printer2.print();
-        printer2.scan();
+        // BasicPrinter printer1 = new BasicPrinter();
+        // printer1.print();
+        // AdvancedPrinter printer2 = new AdvancedPrinter();
+        // printer2.print();
+        // printer2.scan();
+
+
+    //DIP
+        PaymentProcessor creditCard = new CreditCardProcessor();
+        PaymentService paymentService1 = new PaymentService(creditCard);
+        paymentService1.makePayment();
+
+        PaymentService paymentService2 = new PaymentService(new UPIPaymentProcessor());
+        paymentService2.makePayment();
     }
 }
