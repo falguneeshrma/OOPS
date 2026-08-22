@@ -1,1 +1,1 @@
-Alice
+Objects added to static list.
