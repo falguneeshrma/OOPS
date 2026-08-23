@@ -55,20 +55,34 @@ import java.util.*;
 
 //memory leaks
 
-class MemoryLeak{
-    private static List<Object> staticList = new ArrayList<>();
+// class MemoryLeak{
+//     private static List<Object> staticList = new ArrayList<>();
         
-    public void addToStaticList(Object obj){
-        staticList.add(obj);
-    }
+//     public void addToStaticList(Object obj){
+//         staticList.add(obj);
+//     }
+// }
+// class ObjectLifecycle {
+//     public static void main(String[] args) {
+//         MemoryLeak demo = new MemoryLeak();
+//         for(int i = 0; i < 1000000; i++){
+//             demo.addToStaticList(new Object());
+//         }
+
+//         System.out.println("Objects added to static list.");
+//     }
+// }
+
+//cyclic reference
+
+class Node {
+    Node next;
 }
 class ObjectLifecycle {
     public static void main(String[] args) {
-        MemoryLeak demo = new MemoryLeak();
-        for(int i = 0; i < 1000000; i++){
-            demo.addToStaticList(new Object());
-        }
-
-        System.out.println("Objects added to static list.");
+        Node a = new Node();
+        Node b = new Node();
+        a.next = b;
+        b.next = a; // Cyclic reference formed
     }
 }
